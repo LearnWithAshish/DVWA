@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    stages {
     stage('Checkout') {
         // Check out your Git repository
         git 'https://github.com/LearnWithAshish/DVWA.git'
