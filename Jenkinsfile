@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                sh 'mvn clean install'
-            }
-        }
         stage('OWASP Dependency Check') {
             steps {
                 sh '/home/ubuntu/dependency-check/bin/dependency-check.sh \
