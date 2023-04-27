@@ -6,7 +6,6 @@ pipeline {
         steps {
         git 'https://github.com/LearnWithAshish/DVWA.git'
     }
-
     stage('Dependency Check') {
         // Download the Dependency Check CLI
         steps {
@@ -24,4 +23,6 @@ pipeline {
 
     // Add more stages as needed
 }
+}
+    }
 }
