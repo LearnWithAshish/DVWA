@@ -10,9 +10,9 @@ pipeline {
 }
   stage('Run Gitleaks') {
   steps {
-    dir('https://github.com/LearnWithAshish/juice-shop.git') {
+    dir('https://github.com/LearnWithAshish/DVWA.git') {
       sh '''#!/bin/bash
-          sudo gitleaks detect -f json -r https://github.com/LearnWithAshish/juice-shop.git -v --report=/home/ubuntu/gitleaks/gitleaks.json
+          sudo gitleaks detect -f json -r https://github.com/LearnWithAshish/DVWA.git -v --report=/home/ubuntu/gitleaks/gitleaks.json
           exit 0
          '''
         }
