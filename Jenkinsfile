@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('OWASP Dependency Check') {
             steps {
-                sh chmod +x dependency-check/bin/dependency-check.sh
+                sh 'chmod +x dependency-check/bin/dependency-check.sh'
                 sh '/home/ubuntu/dependency-check/bin/dependency-check.sh \
                     --scan https://github.com/LearnWithAshish/DVWA.git \
                     --format HTML \
