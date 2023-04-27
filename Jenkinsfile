@@ -3,11 +3,13 @@ pipeline {
     stages {
     stage('Checkout') {
         // Check out your Git repository
+        steps {
         git 'https://github.com/LearnWithAshish/DVWA.git'
     }
 
     stage('Dependency Check') {
         // Download the Dependency Check CLI
+        steps {
         sh 'curl -LO https://github.com/jeremylong/DependencyCheck/releases/download/v8.2.1/dependency-check-8.2.1-release.zip'
 
         // Unzip the Dependency Check CLI
