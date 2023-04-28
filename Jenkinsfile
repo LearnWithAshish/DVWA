@@ -41,6 +41,7 @@ pipeline {
   steps {
     withSonarQubeEnv('SonarQube Server') {
       sh 'mvn clean package sonar:sonar'
+      sh 'cat target/sonar/report-task.txt'
     }
   }
 }
