@@ -37,6 +37,13 @@ pipeline {
         sh './dependency-check/bin/dependency-check.sh --scan . --format XML --out dependency-check-report.xml' 
     }
 }
+    stage('SonarQube') {
+  steps {
+    withSonarQubeEnv('SonarQube Server') {
+      sh 'mvn clean package sonar:sonar'
+    }
+  }
+}
 }
     }
 
